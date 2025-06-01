@@ -1,0 +1,146 @@
+name: EcPunishment
+version: 1.0.0
+main: de.ecpunishment.EcPunishment
+api-version: 1.16
+author: Developer
+description: Advanced punishment system for Minecraft servers
+website: https://example.com
+
+commands:
+  punish:
+    description: Opens punishment GUI for a player
+    usage: /punish <player>
+    permission: ecpunishment.punish
+  warn:
+    description: Warn a player
+    usage: /warn <player> [reason]
+    permission: ecpunishment.warn
+  mute:
+    description: Mute a player
+    usage: /mute <player> [time] [reason]
+    permission: ecpunishment.mute
+  ban:
+    description: Ban a player
+    usage: /ban <player> [time] [reason]
+    permission: ecpunishment.ban
+  kick:
+    description: Kick a player
+    usage: /kick <player> [reason]
+    permission: ecpunishment.kick
+  jail:
+    description: Jail a player
+    usage: /jail <player> [time]
+    permission: ecpunishment.jail
+  freeze:
+    description: Freeze a player
+    usage: /freeze <player>
+    permission: ecpunishment.freeze
+  softban:
+    description: Softban a player
+    usage: /softban <player>
+    permission: ecpunishment.softban
+  history:
+    description: Show punishment history
+    usage: /history <player>
+    permission: ecpunishment.history
+  modlog:
+    description: Show staff logs
+    usage: /modlog <player>
+    permission: ecpunishment.modlog
+  staffmode:
+    description: Toggle staff mode
+    usage: /staffmode
+    permission: ecpunishment.staffmode
+  modstats:
+    description: Show moderator statistics
+    usage: /modstats [player]
+    permission: ecpunishment.modstats
+  ecpunishment:
+    description: Main plugin command
+    usage: /ecpunishment [reload]
+    permission: ecpunishment.reload
+  setjail:
+    description: Set jail location
+    usage: /setjail
+    permission: ecpunishment.setjail
+  unjail:
+    description: Release a player from jail
+    usage: /unjail <player>
+    permission: ecpunishment.unjail
+  unfreeze:
+    description: Unfreeze a player
+    usage: /unfreeze <player>
+    permission: ecpunishment.unfreeze
+
+permissions:
+  ecpunishment.*:
+    description: Full access to all EcPunishment commands
+    children:
+      ecpunishment.punish: true
+      ecpunishment.warn: true
+      ecpunishment.mute: true
+      ecpunishment.ban: true
+      ecpunishment.kick: true
+      ecpunishment.jail: true
+      ecpunishment.freeze: true
+      ecpunishment.softban: true
+      ecpunishment.history: true
+      ecpunishment.modlog: true
+      ecpunishment.staffmode: true
+      ecpunishment.modstats: true
+      ecpunishment.reload: true
+      ecpunishment.setjail: true
+      ecpunishment.unjail: true
+      ecpunishment.unfreeze: true
+      ecpunishment.bypass: true
+  ecpunishment.punish:
+    description: Access to punishment GUI
+    default: op
+  ecpunishment.warn:
+    description: Permission to warn players
+    default: op
+  ecpunishment.mute:
+    description: Permission to mute players
+    default: op
+  ecpunishment.ban:
+    description: Permission to ban players
+    default: op
+  ecpunishment.kick:
+    description: Permission to kick players
+    default: op
+  ecpunishment.jail:
+    description: Permission to jail players
+    default: op
+  ecpunishment.freeze:
+    description: Permission to freeze players
+    default: op
+  ecpunishment.softban:
+    description: Permission to softban players
+    default: op
+  ecpunishment.history:
+    description: Permission to view punishment history
+    default: op
+  ecpunishment.modlog:
+    description: Permission to view staff logs
+    default: op
+  ecpunishment.staffmode:
+    description: Permission to use staff mode
+    default: op
+  ecpunishment.modstats:
+    description: Permission to view moderator statistics
+    default: op
+  ecpunishment.reload:
+    description: Permission to reload plugin configuration
+    default: op
+  ecpunishment.setjail:
+    description: Permission to set jail location
+    default: op
+  ecpunishment.unjail:
+    description: Permission to release players from jail
+    default: op
+  ecpunishment.unfreeze:
+    description: Permission to unfreeze players
+    default: op
+  ecpunishment.bypass:
+    description: Bypass all punishments
+    default: false
